@@ -23,6 +23,7 @@ public class DownloadUtils {
         request.setDestinationInExternalPublicDir("/download",targetFile);
         DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
         long mTaskid = downloadManager.enqueue(request);
+        //nice
 
     }
 }

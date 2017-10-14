@@ -5,4 +5,5 @@ package cn.edu.gdmec.android.mobileguard.m2theftguard;
  */
 
 public class Setup1Activity {
+
 }

@@ -14,7 +14,7 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
     <style name="wrapcontent">
-        <item name="android:layout_weight">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="textview16sp" parent="wrapcontent">

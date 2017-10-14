@@ -68,7 +68,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void showSetUpPswdDialog(){
         final SetupPaswrodDialong setUpPasswordDialog = new SetupPaswrodDialong(HomeActivity.this);
-        setUpPasswordDialog.setCallBack(new SetupPaswrodDialong.MyCallBack(){
+        setUpPasswordDialog.setCalBack(new SetupPaswrodDialong.MyCallBack(){
             @Override
             public void ok(){
                 String firstPwsd = setUpPasswordDialog.mFirstPWDET.getText().toString().trim();

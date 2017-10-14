@@ -12,9 +12,8 @@ import android.widget.TextView;
 
 import cn.edu.gdmec.android.mobileguard.R;
 
-
 /**
- * Created by 杜卓 on 2017/10/7.
+ * Created by ASUS PRO on 2017/9/27.
  */
 
 public class InterPasswordDialog extends Dialog implements View.OnClickListener{
@@ -22,6 +21,7 @@ public class InterPasswordDialog extends Dialog implements View.OnClickListener{
     private EditText mInterET;
     private Button mOKBtn;
     private Button mCancleBtn;
+
     private MyCallBack myCallBack;
     private Context context;
 
@@ -36,11 +36,12 @@ public class InterPasswordDialog extends Dialog implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         initView();
     }
-    private void initView(){
-        mTitleTV = (TextView) findViewById(R.id.tv_interpwd_title);
-        mInterET = (EditText) findViewById(R.id.et_inter_password);
-        mOKBtn = (Button) findViewById(R.id.btn_comfirm);
-        mCancleBtn = (Button) findViewById(R.id.btn_dismiss);
+
+    private void initView() {
+        mTitleTV = (TextView)findViewById(R.id.tv_interpwd_title);
+        mInterET = (EditText)findViewById(R.id.et_inter_password);
+        mOKBtn = (Button)findViewById(R.id.btn_comfirm);
+        mCancleBtn = (Button)findViewById(R.id.btn_dismiss);
         mOKBtn.setOnClickListener(this);
         mCancleBtn.setOnClickListener(this);
     }
@@ -62,12 +63,15 @@ public class InterPasswordDialog extends Dialog implements View.OnClickListener{
                 break;
         }
     }
+
     public String getPassword(){
         return mInterET.getText().toString();
     }
+
     public void setCallBack(MyCallBack myCallBack){
         this.myCallBack = myCallBack;
     }
+
     public interface MyCallBack{
         void confirm();
         void cancle();

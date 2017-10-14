@@ -25,28 +25,29 @@ public class SetupPaswrodDialong extends Dialog implements View.OnClickListener 
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
-
         setContentView(R.layout.set_up_password_dialog);
         super.onCreate(savedInstanceState);
         initView();
     }
-    public SetupPaswrodDialong(@NonNull Context context) {
-        super(context, R.style.dialog_custom);
+    public SetupPaswrodDialong(@NonNull Context context){
+        super(context,R.style.dialog_custom);
     }
-    private void initView(){
-        mTitleTV = (TextView) findViewById(R.id.tv_setuppwd_title);
-        mFirstPWDET = (EditText) findViewById(R.id.et_firstpwd);
-        mAffirmET = (EditText) findViewById(R.id.et_affirm_password);
+
+    private void initView() {
+        mTitleTV = (TextView)findViewById(R.id.tv_setuppwd_title);
+        mFirstPWDET = (EditText)findViewById(R.id.et_firstpwd);
+        mAffirmET = (EditText)findViewById(R.id.et_affirm_password);
         findViewById(R.id.btn_ok).setOnClickListener(this);
         findViewById(R.id.btn_cancel).setOnClickListener(this);
     }
+
     public void setTitle(String title){
         if (!TextUtils.isEmpty(title)){
             mTitleTV.setText(title);
         }
-
     }
-    public void setCallBack(MyCallBack myCallBack){
+
+    public void setCalBack(MyCallBack myCallBack){
         this.myCallBack = myCallBack;
     }
 
@@ -61,9 +62,8 @@ public class SetupPaswrodDialong extends Dialog implements View.OnClickListener 
                 myCallBack.cancel();
                 break;
         }
+
     }
-
-
 
     public interface MyCallBack{
         void ok();

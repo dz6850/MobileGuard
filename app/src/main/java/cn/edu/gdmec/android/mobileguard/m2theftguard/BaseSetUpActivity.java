@@ -51,6 +51,11 @@ public abstract class BaseSetUpActivity extends AppCompatActivity{
                     overridePendingTransition(R.anim.pre_in,R.anim.pre_out);
                     return true;
                 }
+                if ((e1.getRawX() - e2.getRawX())>200){
+                    showNext();
+                    overridePendingTransition(R.anim.next_in,R.anim.next_out);
+                    return true;
+                }
                 return super.onFling(e1,e2,velocityX,velocityY);
             }
         });

@@ -19,5 +19,7 @@ public class LostFindActivity extends AppCompatActivity{
     }
     private void startSetUp1Activity(){
         Intent intent=new Intent(LostFindActivity.this,Setup1Activity.class);
+        startActivity(intent);
+        finish();
     }
 }

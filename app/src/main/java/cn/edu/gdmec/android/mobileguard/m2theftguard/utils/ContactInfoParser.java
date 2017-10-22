@@ -19,10 +19,10 @@ public class ContactInfoParser {
     public static List<ContactInfo> getSystemContact(Context context){
         ContentResolver resolver = context.getContentResolver();
 
-        Uri uri = Uri.parse("content://com.android.contacts/row_contacts");
+        Uri uri = Uri.parse("content://com.android.contacts/raw_contacts");
         Uri datauri = Uri.parse("content://com.android.contacts/data");
         List<ContactInfo> infos = new ArrayList<ContactInfo>();
-        Cursor cursor = resolver.query(uri, new String[] { "contact_id"},null, null, null);
+        Cursor cursor = resolver.query(uri, new String[] { "contact_id" },null, null, null);
         while(cursor.moveToNext()){
             String id = cursor.getString(0);
             if(id != null){
@@ -38,7 +38,7 @@ public class ContactInfoParser {
                         System.out.println("姓名=" + data1);
                         info.name=data1;
                     }else if("vnd.android.cursor.item/phone_v2".equals(mimetype)){
-                        System.out.println("电话="+ data1);
+                        System.out.println("电话=" + data1);
                         info.phone = data1;
                     }
                 }

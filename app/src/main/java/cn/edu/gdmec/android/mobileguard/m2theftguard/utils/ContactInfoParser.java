@@ -29,7 +29,7 @@ public class ContactInfoParser {
             String id = cursor.getString(0);
             if(id != null){
                 System.out.println("联系人id:" + id);
-                        ContactInfo info = new ContactInfo();
+                ContactInfo info = new ContactInfo();
                 info.id=id;
                 Cursor dataCursor = resolver.query(datauri,new String[]{
                         "data1", "mimetype"},"raw_contact_id=?",new String[] { id },null);
@@ -60,10 +60,10 @@ public class ContactInfoParser {
         if(mCursor != null){
             while (mCursor.moveToNext()){
                 ContactInfo info = new ContactInfo();
-                int nameFileColumIndex = mCursor.getColumnIndex("name");
-                info.name = mCursor.getString(nameFileColumIndex);
-                int numberFileColumIndex = mCursor.getColumnIndex("number");
-                info.phone=mCursor.getString(numberFileColumIndex);
+                int nameFieldColumnIndex = mCursor.getColumnIndex("name");
+                info.name = mCursor.getString(nameFieldColumnIndex);
+                int numberFieldColumnIndex = mCursor.getColumnIndex("number");
+                info.phone=mCursor.getString(numberFieldColumnIndex);
                 infos.add(info);
             }
         }

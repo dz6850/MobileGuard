@@ -69,7 +69,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/sim_bind_selector"
+                android:background="@drawable/sim_bind_e"
                 android:gravity="center"
                 />
         </LinearLayout>

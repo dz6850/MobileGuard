@@ -1,7 +1,7 @@
 package cn.edu.gdmec.android.mobileguard.m2theftguard.utils;
 
 import android.content.ContentResolver;
-import android.content.Context;;
+import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.text.TextUtils;
@@ -11,6 +11,8 @@ import java.util.List;
 
 import cn.edu.gdmec.android.mobileguard.m2theftguard.entity.ContactInfo;
 
+;
+
 /**
  * Created by 24540 on 2017/10/20.
  */
@@ -19,7 +21,7 @@ public class ContactInfoParser {
     public static List<ContactInfo> getSystemContact(Context context){
         ContentResolver resolver = context.getContentResolver();
 
-        Uri uri = Uri.parse("content://com.android.contacts/raw_contacts");
+        Uri uri = Uri.parse("content://com.android.contacts/row_contacts");
         Uri datauri = Uri.parse("content://com.android.contacts/data");
         List<ContactInfo> infos = new ArrayList<ContactInfo>();
         Cursor cursor = resolver.query(uri, new String[] { "contact_id"},null, null, null);
@@ -58,10 +60,10 @@ public class ContactInfoParser {
         if(mCursor != null){
             while (mCursor.moveToNext()){
                 ContactInfo info = new ContactInfo();
-                int nameFieldColumIndex = mCursor.getColumnIndex("name");
-                info.name = mCursor.getString(nameFieldColumIndex);
-                int numberFieldColumIndex = mCursor.getColumnIndex("number");
-                info.phone=mCursor.getString(numberFieldColumIndex);
+                int nameFileColumIndex = mCursor.getColumnIndex("name");
+                info.name = mCursor.getString(nameFileColumIndex);
+                int numberFileColumIndex = mCursor.getColumnIndex("number");
+                info.phone=mCursor.getString(numberFileColumIndex);
                 infos.add(info);
             }
         }

@@ -12,6 +12,4 @@
         android:divider="#FFFFFF"
         android:dividerHeight="1dp"/>
 
-    \
-
 </LinearLayout>

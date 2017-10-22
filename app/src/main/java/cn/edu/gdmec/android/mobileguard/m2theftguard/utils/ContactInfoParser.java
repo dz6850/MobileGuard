@@ -21,7 +21,7 @@ public class ContactInfoParser {
     public static List<ContactInfo> getSystemContact(Context context){
         ContentResolver resolver = context.getContentResolver();
 
-        Uri uri = Uri.parse("content://com.android.contacts/row_contacts");
+        Uri uri = Uri.parse("content://com.android.contacts/raw_contacts");
         Uri datauri = Uri.parse("content://com.android.contacts/data");
         List<ContactInfo> infos = new ArrayList<ContactInfo>();
         Cursor cursor = resolver.query(uri, new String[] { "contact_id"},null, null, null);

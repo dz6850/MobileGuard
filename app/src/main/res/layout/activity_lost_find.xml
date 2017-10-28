@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:orientation="vertical"
-    >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
     <include layout="@layout/titlebar"/>
 
     <RelativeLayout
@@ -22,16 +22,17 @@
         <TextView
             android:id="@+id/tv_safephone"
             style="@style/textview16sp"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:textColor="@color/purple"/>
+
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1.0px"
-        android:background="#10000000" />
+        android:background="#10000000"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -55,7 +56,8 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/toggle_btn_bg_selector"
             android:textOff=""
-            android:textOn="" />
+            android:textOn=""/>
+
     </RelativeLayout>
 
     <View
@@ -83,6 +85,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:background="@drawable/arrow_right"/>
+
     </RelativeLayout>
 
     <View
@@ -105,7 +108,7 @@
             android:gravity="center"
             android:text="短信指令功能简介"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="16sp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -128,6 +131,7 @@
                 android:drawablePadding="5dp"
                 android:text="播放报警音乐"
                 android:textColor="@color/purple"/>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -151,6 +155,7 @@
                 android:drawablePadding="5dp"
                 android:text="GPS追踪"
                 android:textColor="@color/purple"/>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -174,6 +179,7 @@
                 android:drawablePadding="5dp"
                 android:text="远程锁屏"
                 android:textColor="@color/purple"/>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -197,7 +203,10 @@
                 android:drawablePadding="5dp"
                 android:text="远程删除数据"
                 android:textColor="@color/purple"/>
+
         </RelativeLayout>
+
     </LinearLayout>
+
 
 </LinearLayout>

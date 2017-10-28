@@ -29,6 +29,7 @@ import cn.edu.gdmec.android.mobileguard.m1home.entity.VersionEntity;
  * Created by ASUS PRO on 2017/9/17.
  */
 
+/*
 public class VersionUpdateUtils {
     private static final int MESSAGE_IO_ERROR = 102;
     private static final int MESSAGE_JSON_ERROR = 103;
@@ -126,3 +127,4 @@ public class VersionUpdateUtils {
         downloadUtils.downloadApk(apkurl, "mobileguard.apk", context);
     }
 }
+*/

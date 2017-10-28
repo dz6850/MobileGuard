@@ -6,9 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import cn.edu.gdmec.android.mobileguard.R;
 
-/**
- * Created by 杜卓 on 2017/10/14.
- */
 
 public class LostFindActivity extends AppCompatActivity{
     @Override
@@ -23,3 +20,4 @@ public class LostFindActivity extends AppCompatActivity{
         finish();
     }
 }
+//过被

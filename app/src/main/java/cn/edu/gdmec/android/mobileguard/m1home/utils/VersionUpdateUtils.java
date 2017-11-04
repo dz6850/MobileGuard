@@ -1,4 +1,4 @@
-package cn.edu.gdmec.android.mobileguard.m1home.utils;
+package cn.edu.gdmec.android.mobileguard.m1hone.utils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -23,13 +23,9 @@ import java.io.IOException;
 import cn.edu.gdmec.android.mobileguard.R;
 import cn.edu.gdmec.android.mobileguard.m1home.HomeActivity;
 import cn.edu.gdmec.android.mobileguard.m1home.entity.VersionEntity;
+import cn.edu.gdmec.android.mobileguard.m1home.utils.DownloadUtils;
 
 
-/**
- * Created by ASUS PRO on 2017/9/17.
- */
-
-/*
 public class VersionUpdateUtils {
     private static final int MESSAGE_IO_ERROR = 102;
     private static final int MESSAGE_JSON_ERROR = 103;
@@ -74,7 +70,6 @@ public class VersionUpdateUtils {
             HttpConnectionParams.setSoTimeout(httpClient.getParams(), 5000);
             HttpGet httpGet = new HttpGet("http://android2017.duapp.com/updateinfo.html");
             HttpResponse execute = httpClient.execute(httpGet);
-
             if (execute.getStatusLine().getStatusCode() == 200) {
                 HttpEntity httpEntity = execute.getEntity();
                 String result = EntityUtils.toString(httpEntity, "utf-8");
@@ -84,7 +79,7 @@ public class VersionUpdateUtils {
                 versionEntity.description = jsonObject.getString("des");
                 versionEntity.apkurl = jsonObject.getString("apkurl");
                 if (!mVersion.equals(versionEntity.versioncode)) {
-                   handler.sendEmptyMessage(MESSAGE_SHOW_DIALOG);
+                    handler.sendEmptyMessage(MESSAGE_SHOW_DIALOG);
                 }
             }
         } catch (IOException e) {
@@ -101,7 +96,7 @@ public class VersionUpdateUtils {
         builder.setTitle("检测有新版本：" + versionEntity.versioncode);
         builder.setMessage(versionEntity.description);
         builder.setCancelable(false);
-        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setIcon(R.mipmap.ic_launcher_round);
         builder.setPositiveButton("立即升级", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -127,4 +122,4 @@ public class VersionUpdateUtils {
         downloadUtils.downloadApk(apkurl, "mobileguard.apk", context);
     }
 }
-*/
+

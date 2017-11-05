@@ -39,7 +39,7 @@ public class BlackNumberDaoTest {
         for (long i =1 ;i<30;i++){
             BlackContactInfo info = new BlackContactInfo();
             info.phoneNumber = 13500000000l + i +"";
-            info.contackName = "zhangsan" + i;
+            info.contactName = "zhangsan" + i;
             info.mode = random.nextInt(3)+1;
             dao.add(info);
         }
@@ -67,7 +67,7 @@ public class BlackNumberDaoTest {
     @Test
     public void t4GetBlackContactMode() throws Exception{
         BlackNumberDao dao = new BlackNumberDao(context);
-        int mode = dao.getBlackContackMode(13500000008l + "");
+        int mode = dao.getBlackContactMode(13500000008l + "");
         Log.i("TestBlackNumberDao",mode+"");
     }
 

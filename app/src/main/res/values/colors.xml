@@ -3,7 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
     <color name="purple">#5542BB</color>
+
     <color name="bright_purple">#C218D9</color>
     <color name="light_gary">#D1D0CE</color>
+
+    <color name="black30">#30000000</color>
+    <color name="black">#000000</color>
+    <color name="graye5">#E5E5E5</color>
+    <color name="bright_yellow">#FEC435</color>
+    <color name="transparent">#00000000</color>
 </resources>

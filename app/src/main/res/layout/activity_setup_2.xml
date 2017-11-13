@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imgv"
+                android:layout_below="@+id/imgv"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="SIM卡绑定"
                 android:textColor="@android:color/white"
@@ -49,11 +50,14 @@
                 android:background="@drawable/recomand_icon"/>
 
             <TextView
-                style="@style/textview16sp"
+               style="@style/textview16sp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:lineSpacingMultiplier="1.5"
-                android:text="绑定SIM卡后，当再次重启手机是，若SIM卡信息发生变化，手机 卫士会自动发送报警信息给安全手机"/>
+                android:text="绑定SIM卡后，当再次重启手机时，若SIM卡信息发生变化，手机卫士会自动发生报警短信给安全号码！"
+                android:textColor="@color/purple"
+                android:textScaleX="1.1"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -64,15 +68,16 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/btn_bind_sim"
+               android:id="@+id/btn_bind_sim"
                 android:layout_width="180dp"
                 android:layout_height="45dp"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/sim_bind_e"
-                android:gravity="center"
-                />
+                android:background="@drawable/sim_bind_selector"
+                android:gravity="center"/>
+
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -81,6 +86,9 @@
         android:layout_weight="10"
         android:background="@color/purple"
         android:gravity="center">
+
         <include layout="@layout/setup_radiogroup"/>
+
     </LinearLayout>
+
 </LinearLayout>

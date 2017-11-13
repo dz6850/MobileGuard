@@ -28,4 +28,6 @@
         android:text="版本号：1.0"
         android:textSize="16sp"/>
 
+
+
 </RelativeLayout>

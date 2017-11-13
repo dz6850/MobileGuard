@@ -27,7 +27,7 @@ public class BlackContactAdapter extends BaseAdapter{
         this.callBack = callBack;
     }
 
-    public BlackContactAdapter(List<BlackContactInfo>systemContacts, Context context){
+    public BlackContactAdapter(List<BlackContactInfo>systemContacts,Context context){
         super();
         this.contactInfos = systemContacts;
         this.context = context;
@@ -53,18 +53,20 @@ public class BlackContactAdapter extends BaseAdapter{
     public View getView(final int i, View view, ViewGroup viewGroup) {
         ViewHolder holder = null;
         if (view == null){
-            view = View.inflate(context, R.layout.item_list_blackcontact,null);
+            view = View.inflate(context,R.layout.item_list_blackcontact,null);
             holder = new ViewHolder();
             holder.mNameTV = (TextView)view.findViewById(R.id.tv_black_name);
             holder.mModeTV = (TextView)view.findViewById(R.id.tv_balck_mode);
             holder.mContactImgv = view.findViewById(R.id.view_black_icon);
             holder.mDeleteView =view.findViewById(R.id.view_black_delete);
             view.setTag(holder);
+            holder.mTypeTV = (TextView)view.findViewById(R.id.tv_balck_type);
         }else {
             holder = (ViewHolder)view.getTag();
         }
         holder.mNameTV.setText(contactInfos.get(i).contactName + "("
                 + contactInfos.get(i).phoneNumber + ")");
+        holder.mTypeTV.setText(contactInfos.get(i).type);
         holder.mModeTV.setText(contactInfos.get(i).getModeString(contactInfos.get(i).mode));
         holder.mNameTV.setTextColor(context.getResources().getColor(R.color.bright_purple));
         holder.mModeTV.setTextColor(context.getResources().getColor(R.color.bright_purple));
@@ -80,7 +82,7 @@ public class BlackContactAdapter extends BaseAdapter{
                         callBack.DataSizeChanged();
                     }
                 }else {
-                    Toast.makeText(context,"删除失败！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(context,"删除失败！",0).show();
                 }
             }
         });
@@ -91,6 +93,7 @@ public class BlackContactAdapter extends BaseAdapter{
         TextView mModeTV;
         View mContactImgv;
         View mDeleteView;
+        TextView mTypeTV;
     }
     public interface BlackConactCallBack{
         void DataSizeChanged();
@@ -98,6 +101,14 @@ public class BlackContactAdapter extends BaseAdapter{
 
 
 }
+
+
+
+
+
+
+
+
 
 
 

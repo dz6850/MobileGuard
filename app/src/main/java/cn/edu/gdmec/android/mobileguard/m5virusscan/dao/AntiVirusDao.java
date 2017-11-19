@@ -1,9 +1,18 @@
 package cn.edu.gdmec.android.mobileguard.m5virusscan.dao;
 
+<<<<<<< HEAD
+=======
+import android.content.ContentValues;
+>>>>>>> 杀毒111
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+<<<<<<< HEAD
+=======
+import java.io.File;
+
+>>>>>>> 杀毒111
 /**
  * Created by SwinJoy on 2017/11/13.
  */

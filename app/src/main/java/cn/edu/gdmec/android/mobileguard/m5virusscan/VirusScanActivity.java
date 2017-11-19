@@ -19,11 +19,18 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 
 import cn.edu.gdmec.android.mobileguard.R;
+<<<<<<< HEAD
 import cn.edu.gdmec.android.mobileguard.m5virusscan.dao.AntiVirusDao;
 
 /**
  * Created by SwinJoy on 2017/11/13.
  */
+=======
+import cn.edu.gdmec.android.mobileguard.m1home.utils.MyUtils;
+import cn.edu.gdmec.android.mobileguard.m1home.utils.VersionUpdateUtils;
+import cn.edu.gdmec.android.mobileguard.m5virusscan.dao.AntiVirusDao;
+
+>>>>>>> 杀毒111
 
 public class VirusScanActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView mLastTimeTV;
@@ -63,7 +70,11 @@ public class VirusScanActivity extends AppCompatActivity implements View.OnClick
             super.handleMessage(msg);
         }
     };
+<<<<<<< HEAD
     cn.edu.gdmec.android.mobileguard.m1home.utils.VersionUpdateUtils.DownloadCallback downloadCallback = new cn.edu.gdmec.android.mobileguard.m1home.utils.VersionUpdateUtils.DownloadCallback() {
+=======
+    VersionUpdateUtils.DownloadCallback downloadCallback = new VersionUpdateUtils.DownloadCallback() {
+>>>>>>> 杀毒111
         @Override
         public void afterDownload(String filename) {
             copyDB("antivirus.db", Environment.getExternalStoragePublicDirectory("/download/").getPath());
@@ -72,7 +83,11 @@ public class VirusScanActivity extends AppCompatActivity implements View.OnClick
 
     final private void UpdateDb(String localDbVersion){
 
+<<<<<<< HEAD
         final cn.edu.gdmec.android.mobileguard.m1home.utils.VersionUpdateUtils versionUpdateUtils = new cn.edu.gdmec.android.mobileguard.m1home.utils.VersionUpdateUtils(localDbVersion,VirusScanActivity.this,downloadCallback,null);
+=======
+        final VersionUpdateUtils versionUpdateUtils = new VersionUpdateUtils(localDbVersion,VirusScanActivity.this,downloadCallback,null);
+>>>>>>> 杀毒111
         new Thread(){
             @Override
             public void run() {

@@ -11,10 +11,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
-<<<<<<< HEAD
-=======
-import android.widget.BaseAdapter;
->>>>>>> 杀毒111
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -32,12 +28,6 @@ import cn.edu.gdmec.android.mobileguard.m5virusscan.adapter.ScanVirusAdapter;
 import cn.edu.gdmec.android.mobileguard.m5virusscan.dao.AntiVirusDao;
 import cn.edu.gdmec.android.mobileguard.m5virusscan.entity.ScanAppInfo;
 
-<<<<<<< HEAD
-/**
- * Created by SwinJoy on 2017/11/13.
- */
-=======
->>>>>>> 杀毒111
 
 public class VirusScanSpeedActivity extends AppCompatActivity implements View.OnClickListener{
     protected static final int SCAN_BENGIN = 100;
@@ -62,11 +52,7 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
     private List<ScanAppInfo> mScanAppInfos = new ArrayList<ScanAppInfo> (  );
     private SharedPreferences mSP;
     private Handler mHandler = new Handler() {
-<<<<<<< HEAD
         public void handleMessage(Message msg){
-=======
-        public void handleMessage(android.os.Message msg){
->>>>>>> 杀毒111
             switch (msg.what){
                 case SCAN_BENGIN:
                     mScanAppTV.setText ( "初始化杀毒引擎中..." );
@@ -130,28 +116,16 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
                     }
                     String apkpath = info.applicationInfo.sourceDir;
                     //检查获取这个文件的md5特征码
-<<<<<<< HEAD
                     String md5info = MD5Utils.getFileMd5(apkpath);
                     System.out.println (apkpath);
                     System.out.println (md5info);
 
-                    AntiVirusDao antiVirusDao = new AntiVirusDao(
-=======
-                    String md5info =MD5Utils.getFileMd5(apkpath);
-                    System.out.println (apkpath);
-                    System.out.println (md5info);
-
                     AntiVirusDao antiVirusDao = new AntiVirusDao (
->>>>>>> 杀毒111
                             VirusScanSpeedActivity.this.getApplicationContext () );
                     String result = antiVirusDao.checkVirus ( md5info );
                     msg = Message.obtain ();
                     msg.what = SCANNING;
-<<<<<<< HEAD
-                    ScanAppInfo scanInfo = new ScanAppInfo();
-=======
                     ScanAppInfo scanInfo = new ScanAppInfo ();
->>>>>>> 杀毒111
                     if (result == null){
                         scanInfo.description = "扫描安全";
                         scanInfo.isVirus = false;
@@ -192,11 +166,7 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
         mCancleBtn = (Button) findViewById ( R.id.btn_canclescan );
         mCancleBtn.setOnClickListener ( this );
         mScanListView = (ListView) findViewById ( R.id.lv_scanapps );
-<<<<<<< HEAD
-        adapter = new ScanVirusAdapter( mScanAppInfos, this );
-=======
         adapter = new ScanVirusAdapter ( mScanAppInfos, this );
->>>>>>> 杀毒111
         mScanListView.setAdapter ( adapter );
         mScanningIcon = (ImageView) findViewById ( R.id.imgv_scanningicon );
         startAnim();

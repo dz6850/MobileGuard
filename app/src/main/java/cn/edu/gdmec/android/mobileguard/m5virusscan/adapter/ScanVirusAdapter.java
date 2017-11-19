@@ -21,11 +21,7 @@ public class ScanVirusAdapter extends BaseAdapter{
     private List<ScanAppInfo> mScanAppInfos;
     private Context context;
 
-<<<<<<< HEAD
     public ScanVirusAdapter(List<ScanAppInfo> scanAppInfo, Context context){
-=======
-    public ScanVirusAdapter(List<ScanAppInfo> scanAppInfo,Context context){
->>>>>>> 杀毒111
         super();
         mScanAppInfos = scanAppInfo;
         this.context = context;
@@ -75,7 +71,3 @@ public class ScanVirusAdapter extends BaseAdapter{
         return view;
     }
 }
-<<<<<<< HEAD
-//d
-=======
->>>>>>> 杀毒111

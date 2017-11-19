@@ -26,10 +26,6 @@ import cn.edu.gdmec.android.mobileguard.m4appmanager.adapter.AppManagerAdapter;
 import cn.edu.gdmec.android.mobileguard.m4appmanager.entity.AppInfo;
 import cn.edu.gdmec.android.mobileguard.m4appmanager.utils.AppInfoParser;
 
-/**
- * Created by 杜卓 on 2017/11/9.
- */
-
 public class AppManagerActivity extends AppCompatActivity implements View.OnClickListener{
     //手机剩余内存textview
     private TextView mPhoneMemoryTV;

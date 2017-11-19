@@ -19,15 +19,15 @@ import cn.edu.gdmec.android.mobileguard.m4appmanager.utils.DensityUtil;
 import cn.edu.gdmec.android.mobileguard.m4appmanager.utils.EngineUtils;
 
 /**
- * Created by 杜卓 on 2017/11/9.
+ * Created by ASUS PRO on 2017/11/7.
  */
 
-public class AppManagerAdapter extends BaseAdapter {
+public class AppManagerAdapter extends BaseAdapter{
     private List<AppInfo> UserAppInfos;
     private List<AppInfo> SystemAppInfos;
     private Context context;
 
-    public AppManagerAdapter(List<AppInfo> userAppInfos,List<AppInfo> systemAppInfos,Context context){
+    public AppManagerAdapter(List<AppInfo> userAppInfos, List<AppInfo> systemAppInfos, Context context){
         super();
         UserAppInfos = userAppInfos;
         SystemAppInfos = systemAppInfos;
@@ -88,7 +88,7 @@ public class AppManagerAdapter extends BaseAdapter {
             appInfo = SystemAppInfos.get(i - UserAppInfos.size() - 2);
         }
         ViewHolder viewHolder = null;
-        if (view != null & view instanceof LinearLayout){
+        if (view != null & view instanceof  LinearLayout){
             viewHolder = (ViewHolder)view.getTag();
         }else{
             viewHolder = new ViewHolder();
@@ -113,6 +113,8 @@ public class AppManagerAdapter extends BaseAdapter {
                     .findViewById(R.id.ll_option_app);
             viewHolder.mAboutTV = (TextView)view
                     .findViewById(R.id.tv_about_app);
+            viewHolder.mActivityTV = (TextView)view
+                    .findViewById(R.id.tv_activity_app);
             view.setTag(viewHolder);
         }
         if (appInfo != null){
@@ -134,6 +136,7 @@ public class AppManagerAdapter extends BaseAdapter {
         viewHolder.mShareAppTV.setOnClickListener(listener);
         viewHolder.mUninstallTV.setOnClickListener(listener);
         viewHolder.mAboutTV.setOnClickListener(listener);
+        viewHolder.mActivityTV.setOnClickListener(listener);
         return view;
     }
     //创建一个TextView
@@ -144,7 +147,7 @@ public class AppManagerAdapter extends BaseAdapter {
                 DensityUtil.dip2px(context,5),
                 DensityUtil.dip2px(context,5),
                 DensityUtil.dip2px(context,5));
-        tv.setTextColor(ContextCompat.getColor(context,R.color.black));
+        tv.setTextColor(ContextCompat.getColor(context, R.color.black));
         return tv;
     }
 
@@ -167,11 +170,14 @@ public class AppManagerAdapter extends BaseAdapter {
         TextView mAppNameTV;
         //操作app的线性布局
         LinearLayout mAppOptionLL;
+        //关于
         TextView mAboutTV;
+        //活动
+        TextView mActivityTV;
     }
 
     class MyClickListener implements View.OnClickListener {
-        private  AppInfo appInfo;
+        private AppInfo appInfo;
 
         public MyClickListener(AppInfo appInfo){
             super();
@@ -201,7 +207,12 @@ public class AppManagerAdapter extends BaseAdapter {
                     EngineUtils.uninstallApplication(context,appInfo);
                     break;
                 case R.id.tv_about_app:
+                    //关于
                     EngineUtils.AboutApp(context,appInfo);
+                    break;
+                case R.id.tv_activity_app:
+                    //活动
+                    EngineUtils.ActivityApp(context,appInfo);
                     break;
             }
         }

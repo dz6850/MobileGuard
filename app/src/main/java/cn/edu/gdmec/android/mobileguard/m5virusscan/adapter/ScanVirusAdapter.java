@@ -71,3 +71,4 @@ public class ScanVirusAdapter extends BaseAdapter{
         return view;
     }
 }
+//d

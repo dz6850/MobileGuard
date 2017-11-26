@@ -75,7 +75,7 @@ public class CacheClearListActivity extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_cache_clear_list);
+        setContentView(R.layout.activity_clear_list);
         pm = getPackageManager();
         initView();
     }

@@ -4,10 +4,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-/**
- * Created by SwinJoy on 2017/11/13.
- */
-
 public class AntiVirusDao {
     //检查某个md5是否是病毒
 

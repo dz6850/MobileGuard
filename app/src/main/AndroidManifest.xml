@@ -103,9 +103,33 @@
         <activity android:name=".m4appmanager.AppManagerActivity"></activity>
         <activity android:name=".m5virusscan.VirusScanActivity"></activity>
         <activity android:name=".m5virusscan.VirusScanSpeedActivity"></activity>
+
         <activity android:name=".m6cleancache.CacheClearListActivity" />
         <activity android:name=".m6cleancache.CleanCacheActivity"></activity>
 
+
+        <service
+            android:name=".m8trafficmonitor.service.TrafficMonitoringService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".m8trafficmonitor.reciever.BootCompleteReciever"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".m8trafficmonitor.TrafficMonitoringActivity" />
+        <activity android:name=".m8trafficmonitor.OpenratorSetActivity" />
+        <activity android:name=".m9advancedtools.AdvancedToolsActivity" />
+        <activity android:name=".m9advancedtools.NumBelongtoActivity" />
+
+        <service
+            android:name=".m9advancedtools.service.AppLockService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".m9advancedtools.EnterPswActivity" />
+        <activity android:name=".m9advancedtools.AppLockActivity"></activity>
     </application>
 
 </manifest>

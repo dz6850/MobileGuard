@@ -1,6 +1,8 @@
 package cn.edu.gdmec.android.mobileguard.m9advancedtools.service;
 
-
+/**
+ * Created by Swindler on 2017/12/16.
+ */
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningTaskInfo;
 import android.app.Service;

@@ -10,6 +10,9 @@ import android.webkit.MimeTypeMap;
 
 import java.io.File;
 
+/**
+ * Created by Swindler on 2017/9/18.
+ */
 
 public class DownloadUtils {
     public void downloadApk(String url, String targetFile, Context context){

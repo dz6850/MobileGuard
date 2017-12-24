@@ -31,7 +31,6 @@ import java.util.regex.Pattern;
 
 import cn.edu.gdmec.android.mobileguard.R;
 import cn.edu.gdmec.android.mobileguard.m1home.entity.VersionEntity;
-import cn.edu.gdmec.android.mobileguard.m1home.entity.VersionEntity;
 
 import static android.content.Context.DOWNLOAD_SERVICE;
 
@@ -94,7 +93,7 @@ public class VersionUpdateUtils {
     };
     //构造方法老师模块5
     //public VersionUpdateUtils(String mVersion, Activity context) {
-    public VersionUpdateUtils(String mVersion, Activity context, DownloadCallback downloadCallback, Class<?> nextActivty) {
+    public VersionUpdateUtils(String mVersion, Activity context,DownloadCallback downloadCallback,Class<?> nextActivty) {
         this.mVersion = mVersion;
         this.context = context;
         this.downloadCallback = downloadCallback;
@@ -250,4 +249,3 @@ public class VersionUpdateUtils {
         void afterDownload(String filename);
     }
 }
-//1111111111

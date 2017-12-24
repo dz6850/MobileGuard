@@ -14,52 +14,54 @@ import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
 import android.telephony.SmsManager;
 
-import static android.R.attr.name;
-
 /**
- * Created by 杜卓 on 2017/10/28.
+ * Created by Swindler on 2017/10/24.
  */
 
-public class GPSLocationService extends Service {
+public class GPSLocationService extends Service{
     private LocationManager lm;
     private MyListener listener;
+
     @Override
-    public IBinder onBind(Intent intent){
+    public IBinder onBind(Intent intent) {
         return null;
     }
+
     @Override
-    public void onCreate(){
+    public void onCreate() {
         super.onCreate();
-        lm = (LocationManager) getSystemService(LOCATION_SERVICE);
+        lm = (LocationManager)getSystemService(LOCATION_SERVICE);
         listener = new MyListener();
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
         criteria.setCostAllowed(true);
-        String name = lm.getBestProvider(criteria, true);
-        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission  .ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+        String name = lm.getBestProvider(criteria,true);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED){
             return;
         }
-        lm.requestLocationUpdates(name, 0, 0, listener);
+        lm.requestLocationUpdates(name,0,0,listener);
     }
-    private class MyListener implements LocationListener {
 
-
+    private class MyListener implements LocationListener{
         @Override
         public void onLocationChanged(Location location) {
             StringBuilder sb = new StringBuilder();
             sb.append("accuracy:"+location.getAccuracy()+"\n");
             sb.append("speed:"+location.getSpeed()+"\n");
             sb.append("Logitude:"+location.getLongitude()+"\n");
-            sb.append("Latitude"+location.getLatitude()+"\n");
+            sb.append("Latitude:"+location.getLatitude()+"\n");
             String result = sb.toString();
-            SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
-            String safenumber = sp.getString("safephone", "");
-            SmsManager.getDefault().sendTextMessage(safenumber, null, result, null, null);
+            SharedPreferences sp = getSharedPreferences("config",MODE_PRIVATE);
+            String safenumber = sp.getString("safephone","");
+            SmsManager.getDefault().sendTextMessage(safenumber,null,result,null,null);
             stopSelf();
         }
 
         @Override
-        public void onStatusChanged(String provider, int status, Bundle exttras) {
+        public void onStatusChanged(String provider, int status, Bundle extras) {
 
         }
 
@@ -73,5 +75,11 @@ public class GPSLocationService extends Service {
 
         }
     }
-}
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        lm.removeUpdates(listener);
+        listener = null;
+    }
+}

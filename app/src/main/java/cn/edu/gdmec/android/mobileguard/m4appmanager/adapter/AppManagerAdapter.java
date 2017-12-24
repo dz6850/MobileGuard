@@ -27,7 +27,7 @@ public class AppManagerAdapter extends BaseAdapter{
     private List<AppInfo> SystemAppInfos;
     private Context context;
 
-    public AppManagerAdapter(List<AppInfo> userAppInfos, List<AppInfo> systemAppInfos, Context context){
+    public AppManagerAdapter(List<AppInfo> userAppInfos,List<AppInfo> systemAppInfos,Context context){
         super();
         UserAppInfos = userAppInfos;
         SystemAppInfos = systemAppInfos;
@@ -177,7 +177,7 @@ public class AppManagerAdapter extends BaseAdapter{
     }
 
     class MyClickListener implements View.OnClickListener {
-        private AppInfo appInfo;
+        private  AppInfo appInfo;
 
         public MyClickListener(AppInfo appInfo){
             super();

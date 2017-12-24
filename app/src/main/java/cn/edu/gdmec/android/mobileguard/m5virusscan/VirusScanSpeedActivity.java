@@ -5,10 +5,10 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
@@ -28,7 +28,6 @@ import java.util.Locale;
 
 import cn.edu.gdmec.android.mobileguard.R;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.utils.MD5Utils;
-
 import cn.edu.gdmec.android.mobileguard.m5virusscan.Utils.UrlClient;
 import cn.edu.gdmec.android.mobileguard.m5virusscan.adapter.ScanVirusAdapter;
 import cn.edu.gdmec.android.mobileguard.m5virusscan.dao.AntiVirusDao;
@@ -59,7 +58,7 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
     private List<ScanAppInfo> mScanAppInfos = new ArrayList<ScanAppInfo>();
     private SharedPreferences mSP;
     private Handler mHandler = new Handler() {
-        public void handleMessage(android.os.Message msg) {
+        public void handleMessage(Message msg) {
             switch (msg.what) {
                 case SCAN_BEGIN:
                     mScanAppTV.setText("初始化杀毒引擎中...");
@@ -114,7 +113,7 @@ public class VirusScanSpeedActivity extends AppCompatActivity implements View.On
         for (PackageInfo info:installedPackages){
             String apkpath=info.applicationInfo.sourceDir;
             //获取这个文件的md5特征码
-            String md5info=MD5Utils.getFileMd5(apkpath);
+            String md5info= MD5Utils.getFileMd5(apkpath);
             System.out.println(info.packageName+":"+md5info);
             ScanAppInfo scanAppInfo=new ScanAppInfo();
             scanAppInfo.packagename=info.packageName;

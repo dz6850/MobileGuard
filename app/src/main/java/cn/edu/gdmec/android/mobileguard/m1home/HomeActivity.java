@@ -17,7 +17,7 @@ import cn.edu.gdmec.android.mobileguard.R;
 import cn.edu.gdmec.android.mobileguard.m1home.adapter.HomeAdapter;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.LostFindActivity;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.dialog.InterPasswordDialog;
-import cn.edu.gdmec.android.mobileguard.m2theftguard.dialog.SetupPaswrodDialong;
+import cn.edu.gdmec.android.mobileguard.m2theftguard.dialog.SetUpPasswordDialog;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.receiver.MyDeviceAdminReceiver;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.utils.MD5Utils;
 import cn.edu.gdmec.android.mobileguard.m3communicationguard.SecurityPhoneActivity;
@@ -61,6 +61,7 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case 2:
                         startActivity(AppManagerActivity.class);
+                        break;
                     case 3:
                         startActivity(VirusScanActivity.class);
                         break;
@@ -105,9 +106,9 @@ public class HomeActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode,event);
     }
     private void showSetUpPswDialog(){
-        final SetupPaswrodDialong setUpPasswordDialog = new SetupPaswrodDialong(
+        final SetUpPasswordDialog setUpPasswordDialog = new SetUpPasswordDialog(
                 HomeActivity.this );
-        setUpPasswordDialog.setCalBack(new SetupPaswrodDialong.MyCallBack() {
+        setUpPasswordDialog.setCalBack(new SetUpPasswordDialog.MyCallBack() {
             @Override
             public void ok() {
                 String firstPwsd = setUpPasswordDialog.mFirstPWDET
@@ -123,7 +124,7 @@ public class HomeActivity extends AppCompatActivity {
                     }else{
                         Toast.makeText(HomeActivity.this,"两次密码不一致",Toast.LENGTH_LONG).show();
                     }
-                }else {
+            }else {
                     Toast.makeText(HomeActivity.this,"密码不能为空!",Toast.LENGTH_LONG).show();
                 }
             }
@@ -132,7 +133,7 @@ public class HomeActivity extends AppCompatActivity {
             public void cancel() {
                 setUpPasswordDialog.dismiss();
             }
-        });
+    });
         setUpPasswordDialog.setCancelable(true);
         setUpPasswordDialog.show();
     }
@@ -146,7 +147,7 @@ public class HomeActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(mInterPswdDialog.getPassword())){
                     Toast.makeText(HomeActivity.this,"密码不能为空!", Toast.LENGTH_LONG).show();
                 }else if (password.equals(MD5Utils.encode(mInterPswdDialog
-                        .getPassword()))){
+                     .getPassword()))){
                     mInterPswdDialog.dismiss();
                     startActivity(LostFindActivity.class);
                     Toast.makeText(HomeActivity.this,"可以进入手机防盗模块",Toast.LENGTH_LONG).show();
@@ -189,4 +190,3 @@ public class HomeActivity extends AppCompatActivity {
         return true;
     }
 }
-//1

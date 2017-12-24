@@ -2,7 +2,9 @@ package cn.edu.gdmec.android.mobileguard.m9advancedtools.entity;
 
 import android.graphics.drawable.Drawable;
 
-
+/**
+ * Created by Swindler on 2017/12/16.
+ */
 
 public class AppInfo{
 

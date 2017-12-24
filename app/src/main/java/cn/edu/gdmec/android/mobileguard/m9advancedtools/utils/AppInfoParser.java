@@ -1,6 +1,8 @@
 package cn.edu.gdmec.android.mobileguard.m9advancedtools.utils;
 
-
+/**
+ * Created by Swindler on 2017/12/16.
+ */
 
 import android.content.Context;
 import android.content.pm.PackageInfo;

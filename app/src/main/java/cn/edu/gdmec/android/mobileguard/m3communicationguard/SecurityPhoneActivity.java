@@ -113,7 +113,7 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
                         if (lastVisiablePosition == pageBlackNumber.size()-1){
                             pagenumber++;
                             if (pagenumber * pagesize >= totalNumber){
-                                Toast.makeText(SecurityPhoneActivity.this,"没有更多的数据了",Toast.LENGTH_LONG).show();
+                                Toast.makeText(SecurityPhoneActivity.this,"没有更多的数据了",0).show();
 
                             }else {
                                 pageBlackNumber.addAll(dao.getPageBlackNumber(pagenumber,pagesize));

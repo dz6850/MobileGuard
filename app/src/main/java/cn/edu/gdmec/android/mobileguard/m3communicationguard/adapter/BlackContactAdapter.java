@@ -27,7 +27,7 @@ public class BlackContactAdapter extends BaseAdapter{
         this.callBack = callBack;
     }
 
-    public BlackContactAdapter(List<BlackContactInfo>systemContacts,Context context){
+    public BlackContactAdapter(List<BlackContactInfo>systemContacts, Context context){
         super();
         this.contactInfos = systemContacts;
         this.context = context;
@@ -53,7 +53,7 @@ public class BlackContactAdapter extends BaseAdapter{
     public View getView(final int i, View view, ViewGroup viewGroup) {
         ViewHolder holder = null;
         if (view == null){
-            view = View.inflate(context,R.layout.item_list_blackcontact,null);
+            view = View.inflate(context, R.layout.item_list_blackcontact,null);
             holder = new ViewHolder();
             holder.mNameTV = (TextView)view.findViewById(R.id.tv_black_name);
             holder.mModeTV = (TextView)view.findViewById(R.id.tv_balck_mode);
@@ -101,14 +101,6 @@ public class BlackContactAdapter extends BaseAdapter{
 
 
 }
-
-
-
-
-
-
-
-
 
 
 

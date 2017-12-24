@@ -29,7 +29,7 @@ public class InterPasswordDialog extends Dialog implements View.OnClickListener{
         super(context, R.style.dialog_custom);
         this.context = context;
     }
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState){
         setContentView(R.layout.inter_password_dialog);

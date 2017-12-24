@@ -31,7 +31,7 @@ public class AppInfoParser {
 
         List<AppInfo> appinfos = new ArrayList<AppInfo> (  );
         for (PackageInfo packInfo:packInfos){
-            AppInfo appinfo = new AppInfo();
+            AppInfo appinfo = new AppInfo ();
             String packname = packInfo.packageName;
 
             appinfo.packageName = packname;

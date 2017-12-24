@@ -12,6 +12,9 @@ import java.util.Date;
 
 import cn.edu.gdmec.android.mobileguard.m8trafficmonitor.db.TrafficOpenHelper;
 
+/**
+ * Created by Swindler on 2017/11/29.
+ */
 
 public class TrafficDao {
     private TrafficOpenHelper helper;

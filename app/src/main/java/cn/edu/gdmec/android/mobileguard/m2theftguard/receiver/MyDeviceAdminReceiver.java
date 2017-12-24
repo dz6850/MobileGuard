@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 
 /**
- * Created by 杜卓 on 2017/10/28.
+ * Created by Swindler on 2017/10/24.
  */
 
 public class MyDeviceAdminReceiver extends BroadcastReceiver{

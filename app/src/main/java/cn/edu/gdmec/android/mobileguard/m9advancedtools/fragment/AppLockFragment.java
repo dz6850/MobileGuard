@@ -26,6 +26,9 @@ import cn.edu.gdmec.android.mobileguard.m9advancedtools.entity.AppInfo;
 import cn.edu.gdmec.android.mobileguard.m9advancedtools.utils.AppInfoParser;
 
 
+/**
+ * Created by Swindler on 2017/12/16.
+ */
 
 public class AppLockFragment extends Fragment {
     private Context context;
@@ -138,4 +141,3 @@ public class AppLockFragment extends Fragment {
         });
     }
 }
-//1111111

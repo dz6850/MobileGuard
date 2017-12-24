@@ -12,16 +12,16 @@ import android.widget.TextView;
 import cn.edu.gdmec.android.mobileguard.R;
 
 /**
- * Created by 杜卓 on 2017/10/7.
+ * Created by ASUS PRO on 2017/9/27.
  */
 
-public class SetupPaswrodDialong extends Dialog implements View.OnClickListener {
+public class SetUpPasswordDialog extends Dialog implements View.OnClickListener {
+
     private TextView mTitleTV;
     public EditText mFirstPWDET;
     public EditText mAffirmET;
+
     private MyCallBack myCallBack;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -29,7 +29,7 @@ public class SetupPaswrodDialong extends Dialog implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         initView();
     }
-    public SetupPaswrodDialong(@NonNull Context context){
+    public SetUpPasswordDialog(@NonNull Context context){
         super(context,R.style.dialog_custom);
     }
 

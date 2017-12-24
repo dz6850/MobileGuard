@@ -13,6 +13,9 @@ import java.util.Date;
 
 import cn.edu.gdmec.android.mobileguard.m8trafficmonitor.db.dao.TrafficDao;
 
+/**
+ * Created by Swindler on 2017/11/29.
+ */
 
 public class TrafficMonitoringService extends Service{
     private long mOldRxBytes;

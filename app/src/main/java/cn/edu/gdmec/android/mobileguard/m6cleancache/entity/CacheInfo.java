@@ -2,6 +2,9 @@ package cn.edu.gdmec.android.mobileguard.m6cleancache.entity;
 
 import android.graphics.drawable.Drawable;
 
+/**
+ * Created by ASUS PRO on 2017/11/21.
+ */
 
 public class CacheInfo {
     //包名

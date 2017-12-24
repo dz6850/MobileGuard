@@ -12,7 +12,9 @@ import java.util.List;
 
 import cn.edu.gdmec.android.mobileguard.m9advancedtools.db.AppLockOpenHelper;
 
-
+/**
+ * Created by Swindler on 2017/12/16.
+ */
 
 public class AppLockDao {
     /** 程序锁数据库操作逻辑类 */

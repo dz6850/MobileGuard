@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 import cn.edu.gdmec.android.mobileguard.R;
 
+/**
+ * Created by Swindler on 2017/11/29.
+ */
 
 public class OpenratorSetActivity extends AppCompatActivity implements View.OnClickListener{
     private Spinner mSelectSP;

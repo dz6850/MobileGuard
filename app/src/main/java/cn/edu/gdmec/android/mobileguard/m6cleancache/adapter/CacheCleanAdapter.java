@@ -13,12 +13,15 @@ import java.util.List;
 import cn.edu.gdmec.android.mobileguard.R;
 import cn.edu.gdmec.android.mobileguard.m6cleancache.entity.CacheInfo;
 
+/**
+ * Created by ASUS PRO on 2017/11/21.
+ */
 
 public class CacheCleanAdapter extends BaseAdapter {
     private Context context;
     private List<CacheInfo>cacheInfos;
 
-    public CacheCleanAdapter(Context context,List<CacheInfo>cacheInfos){
+    public CacheCleanAdapter(Context context, List<CacheInfo>cacheInfos){
         super();
         this.context = context;
         this.cacheInfos = cacheInfos;

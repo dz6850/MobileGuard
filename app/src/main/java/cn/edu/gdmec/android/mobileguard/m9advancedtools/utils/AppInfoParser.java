@@ -1,6 +1,8 @@
 package cn.edu.gdmec.android.mobileguard.m9advancedtools.utils;
 
-
+/**
+ * Created by Swindler on 2017/12/16.
+ */
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -13,7 +15,7 @@ import java.util.List;
 import cn.edu.gdmec.android.mobileguard.m9advancedtools.entity.AppInfo;
 
 
-public class AppInfoParser{
+public class AppInfoParser {
     /**
      * 获取手机里面的所有的应用程序
      */

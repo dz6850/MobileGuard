@@ -1,6 +1,8 @@
 package cn.edu.gdmec.android.mobileguard.m9advancedtools.widget;
 
-
+/**
+ * Created by ASUS PRO on 2017/12/8.
+ */
 
 import android.content.Context;
 import android.content.res.TypedArray;

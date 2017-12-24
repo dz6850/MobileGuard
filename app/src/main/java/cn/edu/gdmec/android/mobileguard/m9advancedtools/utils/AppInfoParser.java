@@ -15,7 +15,7 @@ import java.util.List;
 import cn.edu.gdmec.android.mobileguard.m9advancedtools.entity.AppInfo;
 
 
-public class AppInfoParser{
+public class AppInfoParser {
     /**
      * 获取手机里面的所有的应用程序
      */

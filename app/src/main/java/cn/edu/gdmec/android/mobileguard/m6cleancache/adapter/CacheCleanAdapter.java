@@ -21,7 +21,7 @@ public class CacheCleanAdapter extends BaseAdapter {
     private Context context;
     private List<CacheInfo>cacheInfos;
 
-    public CacheCleanAdapter(Context context,List<CacheInfo>cacheInfos){
+    public CacheCleanAdapter(Context context, List<CacheInfo>cacheInfos){
         super();
         this.context = context;
         this.cacheInfos = cacheInfos;
